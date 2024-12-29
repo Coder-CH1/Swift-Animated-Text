@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     //MARK: - LIFE CYCLE -
     override func viewDidLoad() {
         super.viewDidLoad()
-        animateLabel(text: "I LOVE UIKIT...")
+        animateLabel(text: "I Love UIKit...")
     }
     
     //MARK: - METHOD TO ANIMATE LABEL -
