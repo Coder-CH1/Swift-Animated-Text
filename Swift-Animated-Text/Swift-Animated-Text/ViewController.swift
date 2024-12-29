@@ -53,21 +53,21 @@ class ViewController: UIViewController {
     func animateSecondLabel(text label: String) {
         let width: CGFloat = 30
         let height: CGFloat = 40
-        let startY: CGFloat = -50
+        let startY: CGFloat = 200
         
         for (index, character) in label.enumerated() {
             let lbl = UILabel()
             lbl.text = String(character)
             lbl.font = UIFont.systemFont(ofSize: 18, weight: .bold)
             lbl.textColor = .white
-            lbl.frame = CGRect(x: CGFloat(40 + index * Int(width)), y: startY, width: width, height: height)
+            lbl.frame = CGRect(x: -50, y: startY, width: width, height: height)
             
             view.addSubview(lbl)
             
             secondAnimatedLabels.append(lbl)
             
-            UIView.animate(withDuration: 0.7, delay: Double(index) * 0.3,options: .curveEaseOut) {
-                lbl.frame.origin.y = CGFloat(150 + index * Int(height))
+            UIView.animate(withDuration: 0.7, delay: Double(index) * 0.3, options: .curveEaseOut) {
+                lbl.frame.origin.x = CGFloat(10 + index * Int(width))
             }
         }
     }
