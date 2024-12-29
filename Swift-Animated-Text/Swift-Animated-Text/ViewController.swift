@@ -49,7 +49,7 @@ class ViewController: UIViewController {
         setSubviewsAndLayout()
     }
     
-    //MARK: - METHOD TO ANIMATE FIRST LABEL -
+    //MARK: - METHOD TO ANIMATE SECOND LABEL -
     func animateSecondLabel(text label: String) {
         let width: CGFloat = 30
         let height: CGFloat = 40
@@ -62,7 +62,7 @@ class ViewController: UIViewController {
             lbl.textColor = .white
             lbl.frame = CGRect(x: CGFloat(40 + index * Int(width)), y: startY, width: width, height: height)
             
-            self.view.addSubview(lbl)
+            view.addSubview(lbl)
             
             secondAnimatedLabels.append(lbl)
             
