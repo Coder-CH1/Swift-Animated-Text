@@ -58,16 +58,16 @@ class ViewController: UIViewController {
         for (index, character) in label.enumerated() {
             let lbl = UILabel()
             lbl.text = String(character)
-            lbl.font = UIFont.systemFont(ofSize: 22, weight: .bold)
+            lbl.font = UIFont.systemFont(ofSize: 18, weight: .bold)
             lbl.textColor = .white
-            lbl.frame = CGRect(x: CGFloat(50 + index * Int(width)), y: startY, width: width, height: height)
+            lbl.frame = CGRect(x: CGFloat(40 + index * Int(width)), y: startY, width: width, height: height)
             
             self.view.addSubview(lbl)
             
             secondAnimatedLabels.append(lbl)
             
-            UIView.animate(withDuration: 0.7, delay: Double(index) * 0.1,options: .curveEaseOut) {
-                lbl.frame.origin.y = CGFloat(200 + index * Int(height))
+            UIView.animate(withDuration: 0.7, delay: Double(index) * 0.3,options: .curveEaseOut) {
+                lbl.frame.origin.y = CGFloat(150 + index * Int(height))
             }
         }
     }
@@ -76,7 +76,7 @@ class ViewController: UIViewController {
     func setSubviewsAndLayout() {
         view.addSubview(firstAnimatedLabel)
         NSLayoutConstraint.activate([
-            firstAnimatedLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100),
+            firstAnimatedLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -80),
             firstAnimatedLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
     }
