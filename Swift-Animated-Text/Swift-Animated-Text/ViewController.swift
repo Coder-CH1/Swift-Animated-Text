@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     fileprivate lazy var firstAnimatedLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
+        label.textColor = #colorLiteral(red: 0.5568627451, green: 0.4235294118, blue: 0.937254902, alpha: 1)
         label.textAlignment = .center
         label.adjustsFontSizeToFitWidth = true
         label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
@@ -59,7 +59,7 @@ class ViewController: UIViewController {
             let lbl = UILabel()
             lbl.text = String(character)
             lbl.font = UIFont.systemFont(ofSize: 18, weight: .bold)
-            lbl.textColor = .white
+            lbl.textColor = #colorLiteral(red: 0.8953734636, green: 0.277369976, blue: 0.1728792787, alpha: 1)
             lbl.frame = CGRect(x: -50, y: startY, width: width, height: height)
             
             view.addSubview(lbl)
@@ -76,7 +76,7 @@ class ViewController: UIViewController {
     func setSubviewsAndLayout() {
         view.addSubview(firstAnimatedLabel)
         NSLayoutConstraint.activate([
-            firstAnimatedLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -80),
+            firstAnimatedLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -150),
             firstAnimatedLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
     }
