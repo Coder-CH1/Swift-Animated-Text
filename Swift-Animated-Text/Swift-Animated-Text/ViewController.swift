@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         animateFirstLabel(text: "I Love UIKit...")
-        animateSecondLabel(text: "Mobile Developer...")
+        animateSecondLabel(text: "I am a Mobile Developer...")
     }
     
     //MARK: - METHOD TO ANIMATE FIRST LABEL -
