@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         animateFirstLabel(text: "I Love UIKit...")
-        animateSecondLabel(text: "I Love iOS...")
+        animateSecondLabel(text: "Mobile Developer...")
     }
 
     //MARK: - METHOD TO ANIMATE FIRST LABEL -
@@ -51,7 +51,9 @@ class ViewController: UIViewController {
     
     //MARK: - METHOD TO ANIMATE SECOND LABEL -
     func animateSecondLabel(text label: String) {
-        let width: CGFloat = 30
+        let screenWidth = view.frame.width
+        let numberOfCharacters = CGFloat(label.count)
+        let width: CGFloat = screenWidth / numberOfCharacters
         let height: CGFloat = 40
         let startY: CGFloat = 200
         
@@ -61,6 +63,9 @@ class ViewController: UIViewController {
             lbl.font = UIFont.systemFont(ofSize: 18, weight: .bold)
             lbl.textColor = #colorLiteral(red: 0.8953734636, green: 0.277369976, blue: 0.1728792787, alpha: 1)
             lbl.frame = CGRect(x: -50, y: startY, width: width, height: height)
+            lbl.textAlignment = .center
+            lbl.adjustsFontSizeToFitWidth = true
+            lbl.minimumScaleFactor = 0.5
             
             view.addSubview(lbl)
             
