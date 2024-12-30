@@ -8,7 +8,7 @@
 import UIKit
 //MARK: - UI -
 class ViewController: UIViewController {
-
+    
     //MARK: - LABEL -
     fileprivate lazy var firstAnimatedLabel: UILabel = {
         let label = UILabel()
@@ -29,14 +29,14 @@ class ViewController: UIViewController {
         animateFirstLabel(text: "I Love UIKit...")
         animateSecondLabel(text: "Mobile Developer...")
     }
-
+    
     //MARK: - METHOD TO ANIMATE FIRST LABEL -
     func animateFirstLabel(text label: String) {
         var currentIndex = 0
         let lenght = label.count
-
+        
         firstAnimatedLabel.text = ""
-
+        
         Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true) { timer in
             if currentIndex < lenght {
                 let index = label.index(label.startIndex, offsetBy: currentIndex)
@@ -62,7 +62,7 @@ class ViewController: UIViewController {
             lbl.text = String(character)
             lbl.font = UIFont.systemFont(ofSize: 18, weight: .bold)
             lbl.textColor = #colorLiteral(red: 0.8953734636, green: 0.277369976, blue: 0.1728792787, alpha: 1)
-            lbl.frame = CGRect(x: -50, y: startY, width: width, height: height)
+            lbl.frame = CGRect(x: CGFloat(index) * width, y: startY, width: width, height: height)
             lbl.textAlignment = .center
             lbl.adjustsFontSizeToFitWidth = true
             lbl.minimumScaleFactor = 0.5
@@ -71,18 +71,22 @@ class ViewController: UIViewController {
             
             secondAnimatedLabels.append(lbl)
             
-            UIView.animate(withDuration: 0.7, delay: Double(index) * 0.3, options: .curveEaseOut) {
-                lbl.frame.origin.x = CGFloat(10 + index * Int(width))
-            }
+            UIView.animate(withDuration: 0.7, delay: Double(index) * 0.3, options: .curveEaseOut, animations: {
+                lbl.frame.origin.y = startY + 50
+            }) {_ in
+                UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: {
+                    lbl.frame.origin.y = startY
+            })
         }
     }
+}
 
-    // MARK: - Subviews and Layout -
-    func setSubviewsAndLayout() {
-        view.addSubview(firstAnimatedLabel)
-        NSLayoutConstraint.activate([
-            firstAnimatedLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -150),
-            firstAnimatedLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-        ])
-    }
+// MARK: - Subviews and Layout -
+func setSubviewsAndLayout() {
+    view.addSubview(firstAnimatedLabel)
+    NSLayoutConstraint.activate([
+        firstAnimatedLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -150),
+        firstAnimatedLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+    ])
+}
 }
