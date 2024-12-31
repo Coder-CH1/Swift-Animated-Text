@@ -61,7 +61,7 @@ class ViewController: UIViewController {
             let lbl = UILabel()
             lbl.text = String(character)
             lbl.font = UIFont.systemFont(ofSize: 18, weight: .bold)
-            lbl.textColor = #colorLiteral(red: 0.8953734636, green: 0.277369976, blue: 0.1728792787, alpha: 1)
+            lbl.textColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
             lbl.frame = CGRect(x: CGFloat(index) * width, y: startY, width: width, height: height)
             lbl.textAlignment = .center
             lbl.adjustsFontSizeToFitWidth = true
