@@ -66,7 +66,7 @@ class ViewController: UIViewController {
             lbl.textAlignment = .center
             lbl.adjustsFontSizeToFitWidth = true
             lbl.minimumScaleFactor = 0.5
-            lbl.alpha = 1
+            lbl.alpha = 0
             
             view.addSubview(lbl)
             
@@ -74,6 +74,7 @@ class ViewController: UIViewController {
             
             UIView.animate(withDuration: 0.7, delay: Double(index) * 0.3, options: .curveEaseOut, animations: {
                 lbl.frame.origin.y = startY + 50
+                lbl.alpha = 1
             }) {_ in
                 UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
                     lbl.frame.origin.y = startY
