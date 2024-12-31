@@ -73,7 +73,7 @@ class ViewController: UIViewController {
             secondAnimatedLabels.append(lbl)
             
             UIView.animate(withDuration: 0.7, delay: Double(index) * 0.3, options: .curveEaseOut, animations: {
-                lbl.frame.origin.y = startY + 50
+                lbl.frame.origin.y = startY - 50
                 lbl.alpha = 1
             }) {_ in
                 UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
