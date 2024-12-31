@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     fileprivate lazy var firstAnimatedLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = #colorLiteral(red: 0.5568627451, green: 0.4235294118, blue: 0.937254902, alpha: 1)
+        label.textColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
         label.textAlignment = .center
         label.adjustsFontSizeToFitWidth = true
         label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
@@ -66,6 +66,7 @@ class ViewController: UIViewController {
             lbl.textAlignment = .center
             lbl.adjustsFontSizeToFitWidth = true
             lbl.minimumScaleFactor = 0.5
+            lbl.alpha = 1
             
             view.addSubview(lbl)
             
@@ -74,7 +75,7 @@ class ViewController: UIViewController {
             UIView.animate(withDuration: 0.7, delay: Double(index) * 0.3, options: .curveEaseOut, animations: {
                 lbl.frame.origin.y = startY + 50
             }) {_ in
-                UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: {
+                UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
                     lbl.frame.origin.y = startY
                 })
             }
