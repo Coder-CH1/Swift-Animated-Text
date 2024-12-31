@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         animateFirstLabel(text: "I Love UIKit...")
-        animateSecondLabel(text: "I am a Mobile Developer...")
+        animateSecondLabel(text: "I am a Mobile App Developer...")
     }
     
     //MARK: - METHOD TO ANIMATE FIRST LABEL -
@@ -76,17 +76,17 @@ class ViewController: UIViewController {
             }) {_ in
                 UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: {
                     lbl.frame.origin.y = startY
-            })
+                })
+            }
         }
     }
-}
-
-// MARK: - Subviews and Layout -
-func setSubviewsAndLayout() {
-    view.addSubview(firstAnimatedLabel)
-    NSLayoutConstraint.activate([
-        firstAnimatedLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -150),
-        firstAnimatedLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-    ])
-}
+    
+    // MARK: - Subviews and Layout -
+    func setSubviewsAndLayout() {
+        view.addSubview(firstAnimatedLabel)
+        NSLayoutConstraint.activate([
+            firstAnimatedLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -150),
+            firstAnimatedLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+        ])
+    }
 }
