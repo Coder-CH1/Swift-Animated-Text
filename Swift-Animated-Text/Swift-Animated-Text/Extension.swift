@@ -7,7 +7,7 @@
 
 import UIKit
 
-//MARK: - UIColor extension for blending array of colors -
+//MARK: - UIColor extension for blending/mixing array of colors -
 extension UIColor {
     static func blend(colors: [UIColor]) -> UIColor {
         let numberOfColors = CGFloat(colors.count)
