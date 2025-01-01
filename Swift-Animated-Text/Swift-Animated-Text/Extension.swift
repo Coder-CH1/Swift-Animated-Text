@@ -23,3 +23,29 @@ extension UIColor {
                        alpha: componentsSum.alpha / numberOfColors)
     }
 }
+
+//MARK: - Extension for animating background colors sequentially -
+extension UIView {
+    func animateBackgroundColor(to color: UIColor, duration: TimeInterval, completion: (() -> Void)? = nil) {
+        UIView.animate(withDuration: duration, animations: {
+            self.backgroundColor = color
+        }, completion: { _ in
+            completion?()
+        })
+    }
+    
+    func animateColorsSequence(colors: [UIColor], duration: TimeInterval) {
+        var delay: TimeInterval = 0
+        
+        for (index, color) in colors.enumerated() {
+            let currentDuration = duration
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+                self.animateBackgroundColor(to: color, duration: currentDuration) {
+                    
+                }
+            }
+            delay += currentDuration
+        }
+    }
+}
