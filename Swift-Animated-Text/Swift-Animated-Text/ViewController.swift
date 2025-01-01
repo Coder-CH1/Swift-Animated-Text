@@ -60,7 +60,7 @@ class ViewController: UIViewController {
         for (index, character) in label.enumerated() {
             let lbl = UILabel()
             lbl.text = String(character)
-            lbl.font = UIFont.systemFont(ofSize: 24, weight: .bold)
+            lbl.font = UIFont.monospacedSystemFont(ofSize: 24, weight: .bold)
             lbl.textColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
             lbl.frame = CGRect(x: CGFloat(index) * width, y: startY, width: width, height: height)
             lbl.textAlignment = .center
