@@ -102,10 +102,10 @@
 				04BE231D2D2146BE00486AE0 /* AppDelegate.swift */,
 				04BE231F2D2146BE00486AE0 /* SceneDelegate.swift */,
 				04BE23212D2146BE00486AE0 /* ViewController.swift */,
+				0461F77E2D25CE5100210F4E /* Extension.swift */,
 				04BE23262D2146C000486AE0 /* Assets.xcassets */,
 				04BE23282D2146C000486AE0 /* LaunchScreen.storyboard */,
 				04BE232B2D2146C000486AE0 /* Info.plist */,
-				0461F77E2D25CE5100210F4E /* Extension.swift */,
 			);
 			path = "Swift-Animated-Text";
 			sourceTree = "<group>";
