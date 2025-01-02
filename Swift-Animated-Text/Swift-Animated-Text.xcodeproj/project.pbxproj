@@ -76,6 +76,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0485D1A62D260F52009E4686 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				04BE231D2D2146BE00486AE0 /* AppDelegate.swift */,
+				04BE231F2D2146BE00486AE0 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		0485D1A72D260F62009E4686 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04BE23212D2146BE00486AE0 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0485D1A82D260F73009E4686 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0461F77E2D25CE5100210F4E /* Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		04BE23112D2146BE00486AE0 = {
 			isa = PBXGroup;
 			children = (
@@ -99,10 +124,9 @@
 		04BE231C2D2146BE00486AE0 /* Swift-Animated-Text */ = {
 			isa = PBXGroup;
 			children = (
-				04BE231D2D2146BE00486AE0 /* AppDelegate.swift */,
-				04BE231F2D2146BE00486AE0 /* SceneDelegate.swift */,
-				04BE23212D2146BE00486AE0 /* ViewController.swift */,
-				0461F77E2D25CE5100210F4E /* Extension.swift */,
+				0485D1A62D260F52009E4686 /* Delegates */,
+				0485D1A72D260F62009E4686 /* Controller */,
+				0485D1A82D260F73009E4686 /* Extension */,
 				04BE23262D2146C000486AE0 /* Assets.xcassets */,
 				04BE23282D2146C000486AE0 /* LaunchScreen.storyboard */,
 				04BE232B2D2146C000486AE0 /* Info.plist */,
