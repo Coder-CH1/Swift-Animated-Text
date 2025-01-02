@@ -37,7 +37,7 @@ extension UIView {
     func animateColorsSequence(colors: [UIColor], duration: TimeInterval) {
         var delay: TimeInterval = 0
         
-        for (index, color) in colors.enumerated() {
+        for (_, color) in colors.enumerated() {
             let currentDuration = duration
             
             DispatchQueue.main.asyncAfter(deadline: .now() + delay) {

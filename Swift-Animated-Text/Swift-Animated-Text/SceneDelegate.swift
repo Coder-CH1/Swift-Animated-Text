@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = rootViewController
         
         let colors: [UIColor] = [.gray, .black, .purple, .brown, .darkGray, .lightGray]
-        window?.animateColorsSequence(colors: colors, duration: 1.0)
+        window?.animateColorsSequence(colors: colors, duration: 2.5)
         window?.makeKeyAndVisible()
     }
     
