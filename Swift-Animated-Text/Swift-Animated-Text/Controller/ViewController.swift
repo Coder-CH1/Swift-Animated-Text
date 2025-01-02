@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     fileprivate lazy var firstAnimatedLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
+        label.textColor = .white
         label.textAlignment = .center
         label.adjustsFontSizeToFitWidth = true
         label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
